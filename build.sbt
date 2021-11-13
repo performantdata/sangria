@@ -324,6 +324,24 @@ ThisBuild / mimaBinaryIssueFilters ++= Seq(
   ProblemFilters.exclude[DirectMissingMethodProblem]("sangria.parser.QueryParser.parseInputWithVariables"),
   ProblemFilters.exclude[DirectMissingMethodProblem]("sangria.parser.QueryParser.parseInputDocumentWithVariables"),
   ProblemFilters.exclude[DirectMissingMethodProblem]("sangria.parser.QueryParser.parseInputDocumentWithVariables"),
+
+  // move parser into module
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Directives"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Document"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Fragments"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Ignored"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Operations"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.ParserConfig"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.ParserConfig$"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.PositionTracking"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.QueryParser"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.QueryParser$"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.SyntaxError"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.SyntaxError$"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Tokens"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.TypeSystemDefinitions"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Types"),
+  ProblemFilters.exclude[MissingClassProblem]("sangria.parser.Values"),
 )
 
 lazy val root = project
